@@ -3,6 +3,7 @@
 }
 .item:hover {
   background-color: rgba(211, 211, 211, 0.4);
+  transition: all 0.4s ease-in-out;
 }
 .link {
   display: block;

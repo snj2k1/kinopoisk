@@ -6,3 +6,4 @@ export * from './errorMessage';
 export * from './menuItem';
 export * from './inputSearch';
 export * from './carousel';
+export * from './popOut';

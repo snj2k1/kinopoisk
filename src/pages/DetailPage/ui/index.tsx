@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import * as styles from './styles.module.scss';
 import { Preloader, addToHistory, useGetMovieQuery } from '../../../shared';
 import { getRatingColor } from '../../../shared/lib/getRatingColor';
@@ -8,6 +8,7 @@ import NoPhoto from '../../../shared/assets/images/no-photo.jpg';
 
 const DetailPage = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const { data, isFetching, error } = useGetMovieQuery(id as string);
   const colorRating = getRatingColor(data?.rating.kp || 0);
 
@@ -31,13 +32,16 @@ const DetailPage = () => {
 
   return data ? (
     <div className={styles.container}>
+      <button className={styles.back_button} onClick={() => navigate(-1)}>
+        Назад
+      </button>
       <div className={styles.info}>
         <img src={data.poster.url || NoPhoto} alt='movie-poster' className={styles.poster} />
         <ul className={styles.list}>
           <li className={styles.title}>{data.name}</li>
           <li className={styles.film_info}>
             <span style={{ color: colorRating, fontWeight: 600, fontSize: 14 }}>
-              {data.rating.kp.toFixed(1)}
+              {data.rating?.kp.toFixed(1)}
             </span>
             <span>
               {` ${data.year}, ${data.genres.map((genre) => genre.name).join(', ')}, ${data.countries.map((country) => country.name).join(', ')}, ${data.ageRating + '+'}`}

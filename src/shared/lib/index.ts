@@ -6,3 +6,4 @@ export { generateQueryAllMovies, generateQuerySearch } from './generateQueryObje
 export { addToHistory } from './addToHistory';
 export { getHistory } from './getHistory';
 export { generateRandomQuery } from './generateRandomQuery';
+export { setSuggest, getSuggest } from './localStorage';

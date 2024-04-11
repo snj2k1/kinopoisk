@@ -26,8 +26,8 @@ export const MoviesList = () => {
             id={film.id}
             img={film.poster?.url || ''}
             genre={film.genres[0]?.name || ''}
-            title={film.name}
-            year={film.year}
+            title={film.name || ''}
+            year={film.year || 0}
             rating={film.rating?.kp || 0}
           />
         ))}

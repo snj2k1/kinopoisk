@@ -22,11 +22,11 @@ const SearchPage = () => {
           <FilmCard
             key={film.id}
             id={film.id}
-            img={film.poster.previewUrl}
-            genre={film.genres[0].name}
-            title={film.name}
-            year={film.year}
-            rating={film.rating.kp}
+            img={film.poster?.previewUrl || ''}
+            genre={film.genres[0]?.name || ''}
+            title={film.name || ''}
+            year={film.year || 0}
+            rating={film.rating?.kp || 0}
           />
         ))}
       </ul>

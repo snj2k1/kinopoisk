@@ -32,3 +32,25 @@
     }
   }
 }
+
+.back_button {
+  width: max-content;
+  padding-left: 25px;
+  background: none;
+  background-image: url(../../../shared/assets/icons/left-arrow-white.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  color: #c9c9c9;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.back_button:hover {
+  background: none;
+  color: #e09100;
+  background-image: url(../../../shared/assets/icons/left-arrow-orange.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
