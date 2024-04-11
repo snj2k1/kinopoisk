@@ -2,11 +2,12 @@ import { FC } from 'react';
 import * as styles from './styles.module.scss';
 import { IPaginationProps } from '../types';
 import classNames from 'classnames';
-import { getPages } from '../../../shared';
+import { getPages, useResize } from '../../../shared';
 import { useSearchParams } from 'react-router-dom';
 
 export const Pagination: FC<IPaginationProps> = ({ currentPage, length }) => {
-  const pages = getPages(currentPage, length);
+  const width = useResize();
+  const pages = getPages(currentPage, length, width);
   const [searchParams, setSearchParams] = useSearchParams();
   if (length === 1) {
     return null;
@@ -20,6 +21,12 @@ export const Pagination: FC<IPaginationProps> = ({ currentPage, length }) => {
 
   return (
     <ul className={styles.list}>
+      <li
+        className={classNames(styles.next, currentPage === 1 && styles.next_disabled)}
+        onClick={currentPage !== 1 ? () => handleClick(1) : undefined}
+      >
+        {'<<'}
+      </li>
       <li
         className={classNames(styles.next, currentPage === 1 && styles.next_disabled)}
         onClick={currentPage !== 1 ? () => handleClick(currentPage - 1) : undefined}
@@ -40,6 +47,12 @@ export const Pagination: FC<IPaginationProps> = ({ currentPage, length }) => {
         onClick={currentPage !== length ? () => handleClick(currentPage + 1) : undefined}
       >
         {'>'}
+      </li>
+      <li
+        className={classNames(styles.next, currentPage === length && styles.next_disabled)}
+        onClick={currentPage !== length ? () => handleClick(length) : undefined}
+      >
+        {'>>'}
       </li>
     </ul>
   );

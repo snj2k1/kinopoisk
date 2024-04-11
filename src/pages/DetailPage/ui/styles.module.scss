@@ -54,3 +54,19 @@
   background-repeat: no-repeat;
   background-position-y: center;
 }
+
+@media screen and (max-width: 992px) {
+  .info {
+    flex-direction: column;
+    > .poster {
+      width: 50%;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .info {
+    > .poster {
+      width: 100%;
+    }
+  }
+}

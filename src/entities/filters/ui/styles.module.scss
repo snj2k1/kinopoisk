@@ -4,6 +4,7 @@
 }
 .panel {
   display: flex;
+  box-sizing: border-box;
   width: 320px;
   gap: 10px;
   background-color: #151515;
@@ -48,5 +49,19 @@
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  .panel {
+    width: 100%;
   }
 }

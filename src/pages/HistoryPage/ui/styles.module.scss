@@ -37,3 +37,16 @@
     font-size: 14px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+  }
+  .item:not(:last-child) {
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
+  }
+}

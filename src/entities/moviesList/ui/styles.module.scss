@@ -10,3 +10,30 @@
   display: grid;
   grid-template-columns: 55px auto 55px;
 }
+
+@media screen and (max-width: 992px) {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .pagination {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 480px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 320px) {
+  .list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
