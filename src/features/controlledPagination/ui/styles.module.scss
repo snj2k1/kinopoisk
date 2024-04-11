@@ -1,0 +1,49 @@
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.page {
+  padding: 5px 10px;
+  border: 1px solid #151515;
+  color: #c6c6c6;
+  background-color: #151515;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+
+  &_active {
+    border: 1px solid rgb(224, 145, 0);
+    cursor: default;
+  }
+}
+.page:hover {
+  border: 1px solid rgb(224, 145, 0);
+}
+
+.next {
+  padding: 5px 10px;
+  border: 1px solid rgb(224, 145, 0);
+  color: #c6c6c6;
+  background-color: rgb(224, 145, 0);
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+
+  &_disabled {
+    border: 1px solid #151515;
+    background-color: #151515;
+    cursor: default;
+  }
+}
+.next:hover {
+  border: 1px solid #c6c6c6;
+}
+.next_disabled:hover {
+  border: 1px solid #151515;
+}

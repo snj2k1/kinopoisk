@@ -1,0 +1,19 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f50 69.91%, #d6bb00);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5.2rem;
+}
+
+button:hover {
+  background: linear-gradient(135deg, rgb(250, 108, 36) 69.91%, #d0b610);
+}

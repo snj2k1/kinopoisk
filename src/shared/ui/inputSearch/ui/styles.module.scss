@@ -1,0 +1,46 @@
+.input_container {
+  position: relative;
+  display: flex;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #151515;
+  background-color: #151515;
+  transition: all 0.4s ease-in-out;
+
+  > .input {
+    padding: 10px 5px;
+    width: 20em;
+    outline: none;
+    border: none;
+    background-color: #151515;
+    color: #c6c6c6;
+    border-radius: 8px;
+  }
+}
+.input_container:hover {
+  border: 1px solid #c6c6c6;
+}
+.button_container {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+
+  > button {
+    background: #151515;
+    width: 25px;
+    height: 25px;
+    background-image: url(../../../assets/icons/search-icon-grey.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  > button:hover {
+    background: #151515;
+    background-image: url(../../../assets/icons/search-icon-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

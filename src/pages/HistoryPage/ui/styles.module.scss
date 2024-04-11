@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+.item {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+
+  > .date {
+    color: lightgray;
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  > .link {
+    font-weight: 600;
+    color: white;
+    transition: all 0.4s ease-in-out;
+  }
+
+  > .link:hover {
+    color: rgb(224, 145, 0);
+  }
+
+  > .url {
+    color: lightgray;
+    font-size: 14px;
+  }
+}

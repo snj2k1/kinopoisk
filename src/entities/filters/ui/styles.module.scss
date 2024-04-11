@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+  width: max-content;
+}
+.panel {
+  display: flex;
+  width: 320px;
+  gap: 10px;
+  background-color: #151515;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+.filters {
+  position: absolute;
+  box-sizing: border-box;
+  top: 125%;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px 10px;
+  border-radius: 8px;
+  z-index: 999;
+  background-color: #151515;
+  transition: all 0.4s ease-in-out;
+
+  &_open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.title {
+  display: block;
+  width: 100%;
+  padding-right: 30px;
+  background-image: url(../../../shared/assets/icons/filter-down.svg);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+
+  &_active {
+    background-image: url(../../../shared/assets/icons/filter-up.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+  }
+}

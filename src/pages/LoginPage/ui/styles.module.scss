@@ -1,0 +1,16 @@
+.link {
+  text-decoration: underline;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  min-width: 350px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}

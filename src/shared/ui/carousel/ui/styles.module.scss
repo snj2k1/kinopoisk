@@ -1,0 +1,93 @@
+.container {
+  position: relative;
+  width: 100%;
+}
+.list {
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+  overflow-x: scroll;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+
+  > .button_next {
+    position: absolute;
+    right: -25px;
+    top: calc(50% - 50px);
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border-radius: 50%;
+    border: 1px solid rgb(224, 145, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #c9c9c9;
+    font-size: 24px;
+    z-index: 999;
+    cursor: pointer;
+  }
+  > .button_prev {
+    position: absolute;
+    left: -25px;
+    top: calc(50% - 50px);
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border-radius: 50%;
+    border: 1px solid rgb(224, 145, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #c9c9c9;
+    font-size: 24px;
+    z-index: 999;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar {
+    width: 1px;
+    height: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: black;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: white;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .item {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    cursor: pointer;
+    > span {
+      font-weight: 600;
+      transition: all 0.4s ease-in-out;
+    }
+
+    > img {
+      width: 250px;
+    }
+  }
+
+  .item:hover {
+    > span {
+      color: rgb(224, 145, 0);
+    }
+  }
+}
