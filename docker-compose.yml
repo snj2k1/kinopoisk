@@ -5,4 +5,4 @@ services:
     ports:
       - '7070:7070'
     environment:
-      - TOKEN_KEY=${TOKEN_KEY}
+      - TOKEN=${TOKEN}

@@ -5,5 +5,5 @@ export const NOT_NULL_FIELDS =
 export const SELECT_FIELD_POSTERS = '&selectFields=previewUrl&notNullFields=previewUrl';
 export const HEADERS = {
   'Content-Type': 'application/json',
-  'X-API-KEY': String(process.env.TOKEN_KEY),
+  'X-API-KEY': String(process.env.TOKEN),
 };

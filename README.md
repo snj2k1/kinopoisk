@@ -5,19 +5,19 @@
 ### Windows (cmd.exe)
 
 ```bash
-set "TOKEN_KEY=<your_token_key>" && npm run start
+set "TOKEN=<your_token>" && npm run start
 ```
 
 ### Windows (Powershell)
 
 ```bash
-($env:TOKEN_KEY = "<your_token_key>") -and (npm run start)
+($env:TOKEN = "<your_token>") -and (npm run start)
 ```
 
 ### Linux, macOS (Bash)
 
 ```bash
-TOKEN_KEY=<your_token_key> npm run start
+TOKEN=<your_token> npm run start
 ```
 
 ## To Run Tests:
@@ -51,19 +51,19 @@ npm run format
 ### Windows (cmd.exe)
 
 ```bash
-set "TOKEN_KEY=<your_token_key>" && docker-compose up --build
+set "TOKEN=<your_token>" && docker-compose up --build
 ```
 
 ### Windows (Powershell)
 
 ```bash
-($env:TOKEN_KEY = "<your_token_key>") -and (docker-compose up --build)
+($env:TOKEN = "<your_token>") -and (docker-compose up --build)
 ```
 
 ### Linux, macOS (Bash)
 
 ```bash
-TOKEN_KEY=<your_token_key> docker-compose up --build
+TOKEN=<your_token> docker-compose up --build
 ```
 
 # FAQ

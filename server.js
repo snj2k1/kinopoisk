@@ -11,6 +11,7 @@ const devServerOptions = {
 const server = new WebpackDevServer(devServerOptions, compiler);
 
 const runServer = async () => {
+  // eslint-disable-next-line no-console
   console.log('Starting server...');
   await server.start();
 };
