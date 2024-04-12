@@ -49,6 +49,24 @@
 
 @media screen and (max-width: 992px) {
   .image {
-    height: auto;
+    height: 25vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image {
+    height: 30vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image {
+    height: 50vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .image {
+    height: 100vw;
   }
 }

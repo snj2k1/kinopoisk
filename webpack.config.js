@@ -1,8 +1,14 @@
 import path from 'path';
+import { fileURLToPath } from 'url';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import NodePolyfillPlugin from 'node-polyfill-webpack-plugin';
 import Dotenv from 'dotenv-webpack';
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 const webpackConfig = {
   mode: 'development',
@@ -60,13 +66,16 @@ const webpackConfig = {
     ],
   },
   output: {
-    path: path.resolve(new URL('.', import.meta.url).pathname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash].js',
     publicPath: '/',
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({ template: './public/index.html', filename: 'index.html' }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),
     new NodePolyfillPlugin(),
     new Dotenv({
       path: `./.env`,

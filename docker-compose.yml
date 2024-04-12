@@ -1,0 +1,8 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - '7070:7070'
+    environment:
+      - TOKEN_KEY=${TOKEN_KEY}
