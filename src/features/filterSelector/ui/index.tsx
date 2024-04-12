@@ -19,7 +19,7 @@ export const FilterSelector: FC<IFilterSelector> = ({
           value={value}
           onChange={(e) => handleChange(String(e.target.value))}
         >
-          <option value=''></option>
+          <option value='' />
           {data.map((el) => (
             <option key={el.id} value={el.value}>
               {el.text || el.value}
@@ -32,7 +32,7 @@ export const FilterSelector: FC<IFilterSelector> = ({
           className={styles.input}
           value={value}
           onChange={(e) => handleChange(String(e.target.value))}
-        ></input>
+        />
       )}
     </div>
   );

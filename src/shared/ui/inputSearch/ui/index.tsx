@@ -36,10 +36,12 @@ export const InputSearch: FC<IInput> = forwardRef<HTMLInputElement, IInput>(
           placeholder={placeholder}
         />
         <div className={styles.button_container}>
-          <button type='submit' onClick={handleReset}></button>
+          <button type='submit' onClick={handleReset} />
         </div>
         <PopOut isOpen={isOpen} suggests={suggests} handleChange={handleChange} />
       </div>
     );
   },
 );
+
+InputSearch.displayName = 'InputSearch';

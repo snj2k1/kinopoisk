@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const INVALID_EMAIL_ERROR = 'Неверный формат электронной почты';
 const MIN_PASSWORD_ERROR = 'Минимальная длина пароля 8 символов';

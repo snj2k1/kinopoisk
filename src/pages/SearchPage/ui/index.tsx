@@ -3,9 +3,11 @@ import { Preloader, generateQuerySearch, useGetSearchQuery } from '../../../shar
 import { FilmCard } from '../../../widgets';
 import * as styles from './styles.module.scss';
 
+type QueryType = string | Record<string, string> | URLSearchParams | string[][] | undefined;
+
 const SearchPage = () => {
   const queryParams = generateQuerySearch();
-  const url = new URLSearchParams(queryParams as any).toString();
+  const url = new URLSearchParams(queryParams as unknown as QueryType).toString();
   const { data, error, isFetching } = useGetSearchQuery(url);
 
   if (isFetching) {

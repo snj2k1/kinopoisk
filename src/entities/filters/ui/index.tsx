@@ -36,9 +36,9 @@ export const Filters = () => {
       queryParams.delete('countries.name');
     }
     if (year) {
-      queryParams.set(`year`, String(year));
+      queryParams.set('year', String(year));
     } else {
-      queryParams.delete(`year`);
+      queryParams.delete('year');
     }
     setSearchParams(queryParams);
     setIsOpen(false);

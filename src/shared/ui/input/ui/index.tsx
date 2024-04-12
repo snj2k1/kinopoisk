@@ -26,3 +26,5 @@ export const Input: FC<IInput> = forwardRef<HTMLInputElement, IInput>(
     );
   },
 );
+
+Input.displayName = 'Input';

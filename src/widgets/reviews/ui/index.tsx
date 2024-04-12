@@ -4,13 +4,15 @@ import * as styles from './styles.module.scss';
 import { ControlledPagination } from '../../../features';
 import { IReviews } from '../types';
 
+type QueryType = string | Record<string, string> | URLSearchParams | string[][] | undefined;
+
 export const Reviews: FC<IReviews> = ({ id }) => {
   const [page, setPage] = useState<number>(1);
   const queryObject = {
     movieId: id,
     page,
   };
-  const query = new URLSearchParams(queryObject as any).toString();
+  const query = new URLSearchParams(queryObject as unknown as QueryType).toString();
   const { data, error, isFetching } = useGetReviewsQuery(query);
 
   if (isFetching) {

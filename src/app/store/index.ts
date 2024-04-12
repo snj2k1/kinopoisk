@@ -11,6 +11,7 @@ export function setupStore(preloadedState?: Partial<RootState>) {
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({ serializableCheck: false }).concat(moviesApi.middleware),
     devTools: true,
+    preloadedState,
   });
 }
 export type RootState = ReturnType<typeof rootReducer>;

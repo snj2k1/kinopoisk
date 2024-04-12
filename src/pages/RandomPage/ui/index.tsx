@@ -15,6 +15,8 @@ import { BASE_URL, HEADERS } from '../../../shared/api/moviesApi/constants';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+type QueryType = string | Record<string, string> | URLSearchParams | string[][] | undefined;
+
 const RandomPage = () => {
   const CancelToken = axios.CancelToken;
   const source = CancelToken.source();
@@ -32,7 +34,7 @@ const RandomPage = () => {
     setIsLoading(true);
     setError(false);
     const queryParams = generateRandomQuery(genre, country, year, rating, type, network);
-    const url = new URLSearchParams(queryParams as any).toString();
+    const url = new URLSearchParams(queryParams as unknown as QueryType).toString();
     axios
       .get(`${BASE_URL}/v1.4/movie/random?${url}`, {
         headers: HEADERS,
@@ -49,6 +51,7 @@ const RandomPage = () => {
       })
       .catch(function (thrown) {
         if (axios.isCancel(thrown)) {
+          // eslint-disable-next-line
           console.log('Отмена:', thrown.message);
         } else {
           setError(true);

@@ -4,9 +4,11 @@ import { FilmCard } from '../../../widgets';
 import { Filters } from '../../filters';
 import * as styles from './styles.module.scss';
 
+type QueryType = string | Record<string, string> | string[][] | URLSearchParams | undefined;
+
 export const MoviesList = () => {
   const queryParams = generateQueryAllMovies();
-  const url = new URLSearchParams(queryParams as any).toString();
+  const url = new URLSearchParams(queryParams as unknown as QueryType).toString();
   const { data, error, isFetching } = useGetMoviesQuery(url);
 
   if (isFetching) {
