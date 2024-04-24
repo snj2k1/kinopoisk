@@ -50,11 +50,11 @@ const DetailPage = () => {
           <li className={styles.desc}>{data.description}</li>
         </ul>
       </div>
-      <Actors persons={data.persons} />
+      <Actors persons={data.persons || []} />
       <Seasons id={data.id} />
       <Reviews id={data.id} />
       <Posters id={data.id} />
-      <SimilarMovies movies={data.similarMovies} />
+      <SimilarMovies movies={data.similarMovies || []} />
     </div>
   ) : (
     <h2>{'Фильм не найден :('}</h2>
