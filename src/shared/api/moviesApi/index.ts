@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery, retry } from '@reduxjs/toolkit/query/react';
-import { MAX_RETRIES, BASE_URL, SELECT_FIELD_POSTERS, HEADERS } from './constants';
+import { MAX_RETRIES, BASE_URL, SELECT_FIELD_POSTERS, HEADERS, SORT_FIELDS } from './constants';
 import { IMovie, IMoviesList, IPosters, IReviews, ISeasons } from './types';
 
 export const moviesApi = createApi({
@@ -14,13 +14,13 @@ export const moviesApi = createApi({
   endpoints: (builder) => ({
     getMovies: builder.query<IMoviesList, string>({
       query: (query) => ({
-        url: `${BASE_URL}/v1.4/movie?${query}`,
+        url: `${BASE_URL}/v1.4/movie?${query}${SORT_FIELDS}`,
         method: 'GET',
       }),
     }),
     getSearch: builder.query<IMoviesList, string>({
       query: (query) => ({
-        url: `${BASE_URL}/v1.4/movie/search?${query}`,
+        url: `${BASE_URL}/v1.4/movie/search?${query}${SORT_FIELDS}`,
         method: 'GET',
       }),
     }),

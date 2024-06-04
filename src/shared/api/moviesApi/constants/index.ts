@@ -1,4 +1,5 @@
 export const BASE_URL = 'https://api.kinopoisk.dev';
+export const SORT_FIELDS = '&sortField=votes.kp&sortType=-1';
 export const MAX_RETRIES = 3;
 export const NOT_NULL_FIELDS =
   '&notNullFields=id&notNullFields=name&notNullFields=year&notNullFields=genres.name&notNullFields=poster.url&notNullFields=rating.kp&notNullFields=description';

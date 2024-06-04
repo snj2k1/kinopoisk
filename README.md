@@ -65,7 +65,3 @@ set "TOKEN=<your_token>" && docker-compose up --build
 ```bash
 TOKEN=<your_token> docker-compose up --build
 ```
-
-# FAQ
-
-1. Пункт **"Если при переходе со страницы на страницу, запросы, относящиеся к старой странице, прерываются (отменяются/прекращаются)":** Для запросов я использовал RTK Query, и мне кажется, что в данном случае Abort особо не имеет смысл, т.к. данные кэшируются. Реализовал Abort только на [странице поиска случайного фильма.](https://github.com/snj2k1/kinopoisk/blob/main/src/pages/RandomPage/ui/index.tsx)

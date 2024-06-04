@@ -1,7 +1,7 @@
 {
   "name": "kinopoisk",
   "version": "1.0.0",
-  "description": "test task for avito",
+  "description": "",
   "main": "index.tsx",
   "type": "module",
   "scripts": {

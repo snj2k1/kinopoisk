@@ -78,7 +78,7 @@ const webpackConfig = {
     }),
     new NodePolyfillPlugin(),
     new Dotenv({
-      path: `./.env`,
+      path: './.env',
       systemvars: true,
     }),
   ],
